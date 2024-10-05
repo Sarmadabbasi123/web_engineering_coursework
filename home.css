@@ -1,4 +1,4 @@
-/* Basic styling for all pages */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -74,7 +74,7 @@ main .hero h2 {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: rgb(194, 189, 181);
     color: #fff;
 }
@@ -89,8 +89,8 @@ footer p a{
     padding: 15px;
     display: grid;
     grid-template-columns: auto auto auto ; 
-   
     opacity: 0.8;
+    gap: 20px;
     gap: 5px;
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
 } 
@@ -99,27 +99,27 @@ footer p a{
     background-color: white;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px  rgba(21, 20, 20, 0.37); /* Adds a subtle shadow */
+    box-shadow: 0 4px 8px  rgba(21, 20, 20, 0.37); 
     text-align: center;
-    transition: transform 0.6s ease, box-shadow 0.8s ease; /* Smooth transition */
+    transition: transform 0.6s ease, box-shadow 0.8s ease; 
     cursor: pointer;
    
 }
 
 .services .service-box:hover {
-    transform: scale(1.1); /* Slightly enlarges on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increases shadow on hover */
+    transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
 }
 
 @media (max-width: 1024px) {
     .services {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 768px) {
     .services {
-        grid-template-columns: 1fr; /* 1 column for small screens */
+        grid-template-columns: 1fr; 
     }
 }
 
@@ -128,7 +128,7 @@ footer p a{
         position: relative;
         background-image: url("https://thumbs.dreamstime.com/b/kinetic-sculpture-moves-changes-shape-response-to-external-stimuli-creating-dynamic-interactive-artwork-invites-327795069.jpg");
     background-position: center;
-    background-size: cover; /* Ensures the image covers the entire div */
+    background-size: cover; 
     background-repeat: no-repeat;
     padding: 20px;
     border-radius: 8px;
@@ -137,7 +137,9 @@ footer p a{
     text-align: center;
     min-height: 250px;
 }
-
+#kinetic:hover{
+    z-index: 3;
+}
 
 #kinetic::before {
     content: '';
@@ -151,7 +153,7 @@ footer p a{
     z-index: 0;
 }
 
-/* Ensure the text is positioned above the overlay */
+
 #kinetic h3, #kinetic p {
     position: relative;
     z-index: 1;
@@ -174,7 +176,7 @@ footer p a{
         position: relative;
         background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj62pwdY7wwiDxuHppCZywD0jyaYtHI4y4kA&s");
     background-position: center;
-    background-size: cover; /* Ensures the image covers the entire div */
+    background-size: cover; 
     background-repeat: no-repeat;
     padding: 20px;
     border-radius: 8px;
@@ -183,7 +185,9 @@ footer p a{
     text-align: center;
     min-height: 250px;
 }
-
+#cast:hover{
+    z-index: 3;
+}
 
 #cast::before {
     content: '';
@@ -192,12 +196,12 @@ footer p a{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.7); 
     border-radius: 8px;
     z-index: 0;
 }
 
-/* Ensure the text is positioned above the overlay */
+
 #cast h3, #cast p {
     position: relative;
     z-index: 1;
@@ -216,41 +220,159 @@ footer p a{
     line-height: 1.6;
     
 }
-#relief::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    z-index: 0;
+
+#relief {
+    position: relative;
+    background-image: url("https://collectionapi.metmuseum.org/api/collection/v1/iiif/10909/32727/restricted");
+background-position: center;
+background-size: cover; 
+background-repeat: no-repeat;
+padding: 20px;
+border-radius: 8px;
+color: white;
+z-index: 1;
+text-align: center;
+min-height: 250px;
 }
 
-/* Ensure the text is positioned above the overlay */
+
+#relief::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7); 
+border-radius: 8px;
+z-index: 0;
+}
+
+
 #relief h3, #relief p {
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    padding: 10px;
+position: relative;
+z-index: 1;
+margin: 0;
+padding: 10px;
 }
 
 #relief h3 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+font-size: 1.8rem;
+font-weight: bold;
+margin-bottom: 10px;
 }
 
 #relief p {
-    font-size: 1rem;
-    line-height: 1.6;
-    
+font-size: 1rem;
+line-height: 1.6;
+
+}
+
+#relief:hover{
+    z-index: 3;
 }
 
 
-#relief img{
-    width: 250px;
-    height: 250px;
-    object-fit: contain;
 
+#Mannerist {
+    position: relative;
+    background-image: url("https://cdn.britannica.com/06/115106-050-3675715E/Centaur-Nessus-Hercules-Giambologna-Loggia-dei-Lanzi.jpg");
+background-position: center;
+background-size: cover; 
+background-repeat: no-repeat;
+padding: 20px;
+border-radius: 8px;
+color: white;
+z-index: 1;
+text-align: center;
+min-height: 250px;
+}
+
+
+#Mannerist::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7); 
+border-radius: 8px;
+z-index: 0;
+}
+
+
+#Mannerist h3, #Mannerist p {
+position: relative;
+z-index: 1;
+margin: 0;
+padding: 10px;
+}
+
+#Mannerist h3 {
+font-size: 1.8rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+#Mannerist p {
+font-size: 1rem;
+line-height: 1.6;
+
+}
+
+#Mannerist:hover{
+    z-index: 3;
+}
+
+
+#Modernist {
+    position: relative;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQYKsC96Tbvs9ZdXoZ7SCBlqR4BO9TtS3xTQ&s");
+background-position: center;
+background-size: cover; 
+background-repeat: no-repeat;
+padding: 20px;
+border-radius: 8px;
+color: white;
+z-index: 1;
+text-align: center;
+min-height: 250px;
+}
+
+
+#Modernist::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7); 
+border-radius: 8px;
+z-index: 0;
+}
+
+
+#Modernist h3, #Modernist p {
+position: relative;
+z-index: 1;
+margin: 0;
+padding: 10px;
+}
+
+#Modernist h3 {
+font-size: 1.8rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+#Modernist p {
+font-size: 1rem;
+line-height: 1.6;
+
+}
+
+#Modernist:hover{
+    z-index: 3;
 }
