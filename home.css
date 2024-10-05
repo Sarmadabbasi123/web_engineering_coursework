@@ -1,0 +1,256 @@
+/* Basic styling for all pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav img{
+    width: 40px;
+    height: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main .hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #e0e0e0;
+}
+
+main .hero h2 {
+    font-size: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(194, 189, 181);
+    color: #fff;
+}
+
+
+footer p a{
+    text-decoration: none;
+    color: white;
+}
+
+.services{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto ; 
+   
+    opacity: 0.8;
+    gap: 5px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+} 
+
+.services .service-box {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px  rgba(21, 20, 20, 0.37); /* Adds a subtle shadow */
+    text-align: center;
+    transition: transform 0.6s ease, box-shadow 0.8s ease; /* Smooth transition */
+    cursor: pointer;
+   
+}
+
+.services .service-box:hover {
+    transform: scale(1.1); /* Slightly enlarges on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increases shadow on hover */
+}
+
+@media (max-width: 1024px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+
+
+#kinetic {
+        position: relative;
+        background-image: url("https://thumbs.dreamstime.com/b/kinetic-sculpture-moves-changes-shape-response-to-external-stimuli-creating-dynamic-interactive-artwork-invites-327795069.jpg");
+    background-position: center;
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    min-height: 250px;
+}
+
+
+#kinetic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 8px;
+    z-index: 0;
+}
+
+/* Ensure the text is positioned above the overlay */
+#kinetic h3, #kinetic p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 10px;
+}
+
+#kinetic h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#kinetic p {
+    font-size: 1rem;
+    line-height: 1.6;
+    
+}
+#cast {
+        position: relative;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj62pwdY7wwiDxuHppCZywD0jyaYtHI4y4kA&s");
+    background-position: center;
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    min-height: 250px;
+}
+
+
+#cast::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 8px;
+    z-index: 0;
+}
+
+/* Ensure the text is positioned above the overlay */
+#cast h3, #cast p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 10px;
+}
+
+#cast h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#cast p {
+    font-size: 1rem;
+    line-height: 1.6;
+    
+}
+#relief::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: 0;
+}
+
+/* Ensure the text is positioned above the overlay */
+#relief h3, #relief p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 10px;
+}
+
+#relief h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#relief p {
+    font-size: 1rem;
+    line-height: 1.6;
+    
+}
+
+
+#relief img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+
+}
