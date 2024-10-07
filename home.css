@@ -5,29 +5,36 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
-    
-    /* background-image: url('bg2.jpg'); */
-    background-repeat: no-repeat;
+    background-image: url('backgroundd.jpg');
     background-size: cover;
-
+    background-repeat: no-repeat;
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #82107c7d;
-    /* height: 100px; */
+    opacity: 0.9;
+    background-color: #000000;
+    z-index: 10; /* Ensure this is higher than 1 */
+    position: sticky; /* Add this to make z-index work */
 }
 
 header h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #ffffff;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+main{
+    
+    /* background-image: url('backgroundd.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
 }
 nav ul {
     list-style: none;
@@ -57,7 +64,8 @@ nav ul li a {
 main .hero {
     text-align: center;
     padding: 50px;
-    background-color: #e0e0e0;
+    /* background-color:rgb(10, 9, 9) !important; */
+    color: white;
 }
 
 main .hero h2 {
@@ -65,24 +73,26 @@ main .hero h2 {
 }
 
 .btn {
-    display: inline-block;
+    /* display: inline-block; */
     margin: 10px;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #524f4f;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .btn:hover {
-    background-color: #555;
-    font-weight: bold;
+    background-color: #6c6b6b;
+    transform: scale(1.2); 
 }
+
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: rgb(194, 189, 181);
+    background-color: rgb(9, 6, 0);
     color: #fff;
 }
 
@@ -96,10 +106,25 @@ footer p a{
     padding: 15px;
     display: grid;
     grid-template-columns: auto auto auto ; 
-    opacity: 0.8;
+    opacity: 1;
     gap: 25px;
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
 } 
+.services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.service-box {
+    position: relative;
+    z-index: 2; 
+}
 
 .services .service-box {
     background-color: white;
@@ -182,6 +207,7 @@ footer p a{
     line-height: 1.6;
     
 }
+
 #cast {
         position: relative;
         background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj62pwdY7wwiDxuHppCZywD0jyaYtHI4y4kA&s");
@@ -405,10 +431,19 @@ line-height: 1.6;
     gap: 20px;
 }
 
-.nav-img{
-    width: 25px;
-    height: 25px;
+.nav-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for transform and box-shadow */
 }
+
+.nav-img:hover {
+    transform: scale(1.2); /* Slightly enlarge the image */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.674); /* Add a white shadow for a glowing effect */
+    opacity: 0.9; /* Slightly decrease opacity for a dimming effect */
+}
+
 
 .main-div{
     display: flex;
@@ -421,4 +456,41 @@ line-height: 1.6;
         flex-direction: column;
         gap: 12px;
     }
+}
+
+
+.comments-section {
+    background-color: transparent; /* Light background for the comments section */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.comments-section h2 {
+    color: #ffffff; /* Darker color for the heading */
+    margin-bottom: 15px;
+    font-size: 24px; /* Larger font size for emphasis */
+}
+
+.comment {
+    background-color: black; /* White background for each comment */
+    border-left: 5px solid #002a50; /* Left border to highlight comments */
+    padding: 15px;
+    margin-bottom: 15px; /* Space between comments */
+    border-radius: 15px; /* Slightly rounded corners */
+    color: #c4c4c4;
+}
+
+.comment p {
+    /* margin-top: 10px; */
+    margin: 0; /* Remove default margin */
+}
+
+.author {
+    font-style: italic; /* Italic style for author */
+    font-weight: bold;
+    color: #888; /* Light gray for author name */
+    margin-top: 20px; /* Space above author name */
+    padding: 10px;
 }
