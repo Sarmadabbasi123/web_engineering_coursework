@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
-    background-image: url('backgroundd.jpg');
+    background-image: url('../images/backgroundd.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -20,7 +20,7 @@ header {
 }
 
 .services {
-    padding: 15px;
+    padding: 40px 15px;
     display: grid;
     grid-template-columns: auto auto auto; 
     opacity: 1;

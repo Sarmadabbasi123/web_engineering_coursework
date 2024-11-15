@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses | Pam England's Sculpture Studio</title>
-    <link rel="stylesheet" href="css/courses.css">
+    <link rel="stylesheet" href="../css/courses.css">
 </head>
 <body>
     <header>
@@ -32,6 +32,7 @@
                         <th>Materials</th>
                         <th>Start Date</th>
                         <th>Enroll</th>
+                        <th>Details</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,6 +56,7 @@
                         <td data-label="Materials">Basic clay, tools, and safety equipment</td>
                         <td data-label="Start Date">July 1, 2024</td>
                         <td data-label="Enroll"><button class="enroll-btn">Enroll Now</button></td>
+                        <td data-label="Details"><button class="details-btn" data-course="Beginner Sculpture Course">Show Details</button></td>
                     </tr>
                     <tr>
                         <td data-label="Course Name">Advanced Sculpture Techniques</td>
@@ -76,6 +78,7 @@
                         <td data-label="Materials">Specialized tools and premium materials</td>
                         <td data-label="Start Date">September 15, 2024</td>
                         <td data-label="Enroll"><button class="enroll-btn">Enroll Now</button></td>
+                        <td data-label="Details"><button class="details-btn" data-course="Advanced Sculpture Techniques">Show Details</button></td>
                     </tr>
                     <tr>
                         <td data-label="Course Name">One-on-One Training</td>
@@ -97,6 +100,7 @@
                         <td data-label="Materials">Customized based on student needs</td>
                         <td data-label="Start Date">Flexible scheduling</td>
                         <td data-label="Enroll"><button class="enroll-btn">Book Now</button></td>
+                        <td data-label="Details"><button class="details-btn" data-course="One-on-One Training">Show Details</button></td>
                     </tr>
                     <tr>
                         <td data-label="Course Name">Sculpture for Kids</td>
@@ -118,14 +122,27 @@
                         <td data-label="Materials">Child-safe materials and tools</td>
                         <td data-label="Start Date">June 15, 2024 (Summer Camp)</td>
                         <td data-label="Enroll"><button class="enroll-btn">Enroll Now</button></td>
+                        <td data-label="Details"><button class="details-btn" data-course="Sculpture for Kids">Show Details</button></td>
                     </tr>
                 </tbody>
             </table>
         </section>
+
+<!-- Popup Modal -->
+<div id="course-details-popup" class="popup hidden">
+    <div class="popup-content">
+        <button id="close-popup-btn" class="close-btn">Close</button>
+        <h2 id="popup-course-name"></h2>
+        <p id="popup-course-description"></p>
+        <ul id="popup-course-details"></ul>
+    </div>
+</div>
+
     </main>
 
     <footer>
         <p>© 2024 Pam England's Sculpture Studio | <a href="contact.html">Contact Us</a></p>
     </footer>
+    <script src="javascript/courses.js"></script>
 </body>
 </html>

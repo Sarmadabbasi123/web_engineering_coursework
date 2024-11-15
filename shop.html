@@ -20,6 +20,7 @@
 
     <main>
         <section class="product-list">
+            <!-- Predefined items will be added here initially -->
             <div class="product">
                 <img src="images/image1.jpg" alt="Sculpture 1">
                 <h3>Handmade Clay Sculpture</h3>
@@ -28,7 +29,6 @@
                 <input type="number" id="quantity1" name="quantity1" min="1" value="1">
                 <button class="add-to-cart">Add to Cart</button>
             </div>
-
             <div class="product">
                 <img src="images/image2.jpg" alt="Sculpture 2">
                 <h3>Modern Art Sculpture</h3>
@@ -37,7 +37,6 @@
                 <input type="number" id="quantity2" name="quantity2" min="1" value="1">
                 <button class="add-to-cart">Add to Cart</button>
             </div>
-
             <div class="product">
                 <img src="images/image3.jpg" alt="Sculpture 3">
                 <h3>Abstract Bronze Sculpture</h3>
@@ -46,7 +45,6 @@
                 <input type="number" id="quantity3" name="quantity3" min="1" value="1">
                 <button class="add-to-cart">Add to Cart</button>
             </div>
-
             <div class="product">
                 <img src="images/image4.jpg" alt="Sculpture 4">
                 <h3>Minimalist Marble Sculpture</h3>
@@ -55,7 +53,6 @@
                 <input type="number" id="quantity4" name="quantity4" min="1" value="1">
                 <button class="add-to-cart">Add to Cart</button>
             </div>
-
             <div class="product">
                 <img src="images/image5.jpg" alt="Sculpture 5">
                 <h3>Wooden Carved Sculpture</h3>
@@ -64,7 +61,6 @@
                 <input type="number" id="quantity5" name="quantity5" min="1" value="1">
                 <button class="add-to-cart">Add to Cart</button>
             </div>
-
             <div class="product">
                 <img src="images/image6.jpg" alt="Sculpture 6">
                 <h3>Glass Blown Sculpture</h3>
@@ -74,10 +70,33 @@
                 <button class="add-to-cart">Add to Cart</button>
             </div>
         </section>
+
+        <!-- Form to add new items -->
+        <section class="add-item-form">
+            <h2>Add New Sculpture</h2>
+            <form id="item-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required><br>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" min="1" required><br>
+
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required><br>
+
+                <button type="submit">Add Item</button>
+            </form>
+        </section>
+
+        <section class="dynamic-list-controls">
+            <button id="remove-item-btn">Remove Last Item</button>
+        </section>
     </main>
 
     <footer>
         <p>© 2024 Pam England's Sculpture Studio | <a href="contact.html">Contact Us</a></p>
     </footer>
+
+    <script src="javascript/shop.js"></script>
 </body>
 </html>
