@@ -84,3 +84,15 @@ const coursesData = {
         ]
     }
 };
+
+// Function to handle color changes
+function changeBodyColor(event) {
+    
+    document.body.style.backgroundColor = event.target.value
+}
+
+function changeNavColor(event) {
+    const header = document.querySelector('header'); // Correctly select the header
+    header.style.backgroundColor = event.target.value
+}
+

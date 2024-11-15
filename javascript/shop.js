@@ -3,6 +3,11 @@ const addItemForm = document.getElementById('item-form');
 const removeItemBtn = document.getElementById('remove-item-btn');
 const dynamicProductList = document.querySelector('.product-list');
 
+// Popup elements
+const openFormBtn = document.getElementById('open-form-btn');
+const closePopupBtn = document.getElementById('close-popup-btn');
+const itemPopup = document.getElementById('item-popup');
+
 // Function to create a product item dynamically
 function createProductItem(title, price, imageURL) {
     const productDiv = document.createElement('div');
@@ -60,6 +65,7 @@ addItemForm.addEventListener('submit', function(event) {
 
             // Clear the form after adding the item
             addItemForm.reset();
+            closePopup(); // Close the popup after adding the item
         }
 
         reader.readAsDataURL(imageFile);
@@ -77,3 +83,26 @@ removeItemBtn.addEventListener('click', () => {
         alert('No items to remove.');
     }
 });
+
+// Function to open the popup
+openFormBtn.addEventListener('click', () => {
+    itemPopup.style.display = 'flex'; // Show the popup
+});
+
+// Function to close the popup
+closePopupBtn.addEventListener('click', () => {
+    itemPopup.style.display = 'none'; // Hide the popup
+});
+
+
+
+// Function to handle color changes
+function changeBodyColor(event) {
+    
+    document.body.style.backgroundColor = event.target.value
+}
+
+function changeNavColor(event) {
+    const header = document.querySelector('header'); // Correctly select the header
+    header.style.backgroundColor = event.target.value
+}

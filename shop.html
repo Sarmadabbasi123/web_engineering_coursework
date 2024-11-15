@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop | Pam England's Sculpture Studio</title>
     <link rel="stylesheet" href="css/shop.css">
 </head>
+
 <body>
-    <header>
+    <header class="header">
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="color-picker-container">
+                <label for="navbar-color">Navbar Color:</label>
+                <input type="color" oninput="changeNavColor(event)" id="navbar-color">
+            
+                <label for="body-color">Body Color:</label>
+                <input type="color" id="body-color" oninput="changeBodyColor(event)">
+            </div>
         </nav>
+        
         <h1>Shop Sculptures</h1>
     </header>
 
@@ -71,24 +81,31 @@
             </div>
         </section>
 
-        <!-- Form to add new items -->
-        <section class="add-item-form">
-            <h2>Add New Sculpture</h2>
-            <form id="item-form">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required><br>
 
-                <label for="price">Price:</label>
-                <input type="number" id="price" name="price" min="1" required><br>
 
-                <label for="image">Image:</label>
-                <input type="file" id="image" name="image" accept="image/*" required><br>
+        <!-- Popup Form to add new items -->
+        <div id="item-popup" class="popup-form">
+            <div class="popup-content add-item-form">
+                <h2>Add New Sculpture</h2>
+                <form id="item-form">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required><br>
 
-                <button type="submit">Add Item</button>
-            </form>
-        </section>
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" min="1" required><br>
+
+                    <label for="image">Image:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required><br>
+
+                    <button type="submit">Add Item</button>
+                    <button id="close-popup-btn">Close</button>
+                </form>
+            </div>
+        </div>
 
         <section class="dynamic-list-controls">
+                    <!-- Button to open the add item form -->
+        <button id="open-form-btn">Add New Sculpture</button>
             <button id="remove-item-btn">Remove Last Item</button>
         </section>
     </main>
@@ -99,4 +116,5 @@
 
     <script src="javascript/shop.js"></script>
 </body>
+
 </html>

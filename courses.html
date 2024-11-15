@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="../css/courses.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="color-picker-container">
+                <label for="navbar-color">Navbar Color:</label>
+                <input type="color" oninput="changeNavColor(event)" id="navbar-color">
+            
+                <label for="body-color">Body Color:</label>
+                <input type="color" id="body-color" oninput="changeBodyColor(event)">
+            </div>
         </nav>
         <h1>Our Courses</h1>
     </header>
