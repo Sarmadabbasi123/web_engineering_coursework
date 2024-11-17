@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #be7474;
+    background-color: #605858;
     color: #333;
     background-size: cover;
     background-repeat: no-repeat;
@@ -237,6 +237,31 @@ footer {
 @media (max-width: 768px) {
     .product {
         width: calc(50% - 20px);
+    }
+    
+    /* Stack nav items vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Remove gap between items and center-align */
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Make the color-picker-container responsive */
+    .color-picker-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px; /* Add spacing from other elements */
+    }
+
+    .color-picker-container label,
+    .color-picker-container input {
+        font-size: 14px; /* Adjust size for smaller screens */
+        width: 100%; /* Ensure full width for inputs */
     }
 }
 

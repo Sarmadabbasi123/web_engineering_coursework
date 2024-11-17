@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #a01717;
+    background-color: #297679;
     color: #333;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 /* Header styling */
 header {
     color: #f2f2f2;
@@ -45,7 +46,8 @@ nav ul li a {
 .color-picker-container {
     position: absolute;
     top: 0;
-    right: 20px; /* Add some padding from the edge */
+    right: 20px;
+    /* Add some padding from the edge */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -54,7 +56,8 @@ nav ul li a {
 
 /* Style for labels */
 .color-picker-container label {
-    color: white; /* White text color */
+    color: white;
+    /* White text color */
     font-size: 14px;
     font-weight: bold;
 }
@@ -103,7 +106,8 @@ table {
     font-size: 0.9em;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
@@ -124,7 +128,8 @@ ul {
     margin: 0;
 }
 
-.enroll-btn, .details-btn{
+.enroll-btn,
+.details-btn {
     background-color: #333;
     border: none;
     color: white;
@@ -139,7 +144,8 @@ ul {
     transition: background-color 0.3s ease;
 }
 
-.enroll-btn:hover, .details-btn:hover {
+.enroll-btn:hover,
+.details-btn:hover {
     background-color: #555;
 }
 
@@ -151,8 +157,55 @@ footer {
     opacity: 0.9;
 }
 
+@media screen and (max-width: 1130px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background-color: white;
+        border: 1px solid #ccc;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+
+    .enroll-btn, .details-btn {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+
     /* Stack nav items vertically */
     nav ul {
         flex-direction: column;
@@ -164,28 +217,50 @@ footer {
         margin: 10px 0;
     }
 
-    table, thead, tbody, th, td, tr {
+    /* Make the color-picker-container responsive */
+    .color-picker-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        /* Add spacing from other elements */
+    }
+
+    .color-picker-container label,
+    .color-picker-container input {
+        font-size: 14px;
+        /* Adjust size for smaller screens */
+        width: 100%;
+        /* Ensure full width for inputs */
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
         display: block;
     }
-    
+
     thead tr {
         position: absolute;
         top: -9999px;
         left: -9999px;
     }
-    
+
     tr {
         margin-bottom: 15px;
         background-color: white;
         border: 1px solid #ccc;
     }
-    
+
     td {
         border: none;
         position: relative;
         padding-left: 50%;
     }
-    
+
     td:before {
         position: absolute;
         top: 6px;
@@ -196,8 +271,8 @@ footer {
         content: attr(data-label);
         font-weight: bold;
     }
-    
-    .enroll-btn {
+
+    .enroll-btn, .details-btn {
         display: block;
         width: 100%;
         margin-top: 10px;
@@ -253,4 +328,3 @@ footer {
 .close-btn:hover {
     background-color: #d32f2f;
 }
-
