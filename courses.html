@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses | Pam England's Sculpture Studio</title>
-    <link rel="stylesheet" href="../css/courses.css">
+    <link rel="stylesheet" href="css/courses.css">
 </head>
 
 <body>
@@ -29,11 +29,13 @@
 
     <main>
         <section class="course-list">
-            <table>
+            <button class="changeText-btn" onclick="changeTableTextStyle()">Change Text Style</button>
+            <button class="resetText-btn" onclick="resetTableTextStyle()">Reset Text Style</button>
+            <table id="CourseTable">
                 <thead>
                     <tr>
                         <th>Course Name</th>
-                        <th>Description</th>
+                        <th>Description </th>
                         <th>Duration</th>
                         <th>Instructor</th>
                         <th>Price</th>

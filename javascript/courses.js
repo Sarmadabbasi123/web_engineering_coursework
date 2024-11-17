@@ -96,3 +96,13 @@ function changeNavColor(event) {
     header.style.backgroundColor = event.target.value
 }
 
+// Function to change text style of course description
+function changeTableTextStyle(){
+    const table=document.getElementById('CourseTable');
+    table.classList.add('changed-style');
+}
+
+function resetTableTextStyle(){
+    const table=document.getElementById('CourseTable');
+    table.classList.remove('changed-style');
+}
