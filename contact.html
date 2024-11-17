@@ -22,11 +22,37 @@
     <main>
         <section class="contact-form">
             <h2>Get in Touch</h2>
-            <form action="submit_form.php" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
+            <form onsubmit="return validateForm()">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="First & Last names">
+                <div id="nameError" class="error">Name is required</div>
+        
+                <label for="email">Your Email:</label>
+                <input type="text" id="email" name="email" placeholder="abc@xyz.com">
+                <div id="emailError" class="error">Please enter a valid email address</div>
+        
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="03xxxxxxxxx" maxlength="11" minlength="11">
+                <div id="phoneError" class="error">Please enter a valid phone number (11 digits only)</div>
+        
+                <label for="favourite-product">Favourite Product:</label>
+                <select name="favourite-product" id="favourite-product">
+                    <option value="">Select your favorite product</option>
+                    <option value="product1">Handmade Clay Sculpture</option>
+                    <option value="product2">Modern Art Sculpture</option>
+                    <option value="product3">Abstract Bronze Sculpture</option>
+                    <option value="product4">Minimalist Marble Sculpture</option>
+                    <option value="product5">Wooden Carved Sculpture</option>
+                    <option value="product6">Glass Blown Sculpture</option>
+                </select>
+                <div id="productError" class="error">Please select a product</div>
+        
+                <label for="message">Your Message:</label>
+                <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                <div id="messageError" class="error">Message is required</div>
+        
                 <button type="submit">Send Message</button>
+                <div id="successMessage" class="success-message">Form submitted successfully!</div>
             </form>
         </section>
     </main>
@@ -34,5 +60,7 @@
     <footer>
         <p>© 2024 Pam England's Sculpture Studio | <a href="contact.html">Contact Us</a></p>
     </footer>
+    <script src="javascript/contact.js"></script>
+
 </body>
 </html>

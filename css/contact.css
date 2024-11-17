@@ -52,13 +52,13 @@ header h1 {
 
 /* Main Styling */
 .contact-form {
-    max-width: 600px;
-    margin: 50px auto;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
+    background-color: white;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
 }
 
 .contact-form h2 {
@@ -69,42 +69,56 @@ header h1 {
 
 .contact-form label {
     display: block;
-    font-size: 1rem;
     margin: 15px 0 5px;
-    text-align: left;
-    color: #555;
+    font-weight: bold;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+input, select, textarea {
     width: 100%;
-    padding: 10px;
-    margin: 5px 0 20px;
+    padding: 8px;
+    margin-bottom: 5px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.contact-form textarea {
+textarea {
     height: 100px;
     resize: vertical;
 }
 
-.contact-form button {
+button {
     background-color: #4CAF50;
     color: white;
-    border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.contact-form button:hover {
+button:hover {
     background-color: #45a049;
 }
 
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.success-message {
+    display: none;
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
 /* Footer Styling */
 footer {
     text-align: center;
@@ -120,6 +134,18 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* error style */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
+
+.success-message {
+    color: green;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 /* Responsive Design */
