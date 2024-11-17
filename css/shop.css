@@ -21,12 +21,6 @@ header {
     z-index: 10;
 }
 
-
-/* Navigation styling */
-nav {
-    position: relative;
-}
-
 /* Navigation list styling */
 nav ul {
     list-style: none;

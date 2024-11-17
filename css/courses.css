@@ -18,14 +18,10 @@ header {
     opacity: 0.9;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 }
 
 
-/* Navigation styling */
-nav {
-    position: relative;
-}
 
 /* Navigation list styling */
 nav ul {
@@ -76,13 +72,11 @@ nav ul li a {
 /* Main Styling */
 main {
     padding: 2rem;
-    position: relative;
     z-index: 2;
 }
 
 main::before {
     content: "";
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -290,7 +284,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .popup.hidden {
@@ -319,6 +313,7 @@ footer {
     color: white;
     border: none;
     padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     float: right;
